@@ -1,0 +1,30 @@
+.page-footer {
+  width: 100%;
+  min-height: 233px;
+  background-color: @white;
+}
+
+.page-footer__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-footer__social-list {
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    align-items: center;
+    min-height: 120px;
+  }
+}
+
+.page-footer__hashtag {
+  display: block;
+  margin-top: 28px;
+}

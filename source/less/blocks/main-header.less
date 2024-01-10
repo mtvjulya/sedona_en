@@ -1,0 +1,25 @@
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 56px;
+  // width: 100%;
+  background-color: @white;
+}
+
+.main-header__logo {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 1;
+
+  @media (min-width: @desktop-width) {
+    margin-left: -93px;
+  }
+}
+
+.main-header__logo-picture {
+  display: block;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon-32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/16.png">
+  <link rel="apple-touch-icon" href="img/favicon/32.png">
+
+  <title>Sedona</title>
+</head>
+
+<body class="page__body">
+  <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id='youtube' viewBox="0 0 20 14" width="20" height="14" fill="white">
+      <path
+        d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" />
+    </symbol>
+    <symbol viewBox="0 0 9 19" id='facebook' fill="currentColor">
+      <path
+        d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" />
+    </symbol>
+    <symbol viewBox="0 0 18 15" fill="currentColor" id='twitter'>
+      <path
+        d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" />
+    </symbol>
+  </svg>
+
+  <header class="main-header">
+    <a class="main-header__logo">
+      <picture>
+        <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
+        <img class="main-header__logo-picture" src="img/logo-sedona.svg" width="101" height="84" alt="Логотип Седоны">
+      </picture>
+    </a>
+    <nav class="main-header__main-nav main-nav--closed main-nav">
+      <button class="main-nav__nav-toggle nav-toggle" aria-label="Open menu"></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__nav-list nav-list list">
+          <li class="nav-list__item site-list__item--active">
+            <a class="nav-list__nav-link link" href="index.html">Main</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__nav-link link" href="catalog.html">Photos and videos</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__nav-link link" href="form.html">Feedback Form</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__nav-link link" href="hotels.html">Hotels</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Choose a hotel in Sedona</h1>
+    <section class="filter-section ">
+      <h2 class="visually-hidden">Filter out hotels</h2>
+      <form class="hotel-form container" action="https://echo.htmlacademy.ru/" method="POST">
+        <fieldset class="hotel-field infrastructure-field">
+          <legend class="form-legend">Infrastructure:</legend>
+          <ul class="infrastructure-list clear-list">
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="infrastructure" id="pool"
+                value="pool" checked>
+              <label class="fieldset-label" for="pool">Pool</label>
+            </li>
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="infrastructure" id="parking"
+                value="parking">
+              <label class="fieldset-label" for="parking">Parking space</label>
+            </li>
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="infrastructure" id="wi-fi"
+                value="wi-fi">
+              <label class="fieldset-label" for="wi-fi">Wi-fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="hotel-field stay_type-field">
+          <legend class="form-legend">Type of housing:</legend>
+          <ul class="infrastructure-list clear-list">
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="stay-type" id="hotel"
+                value="hotel" checked>
+              <label class="fieldset-label" for="hotel">Hotel</label>
+            </li>
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="stay-type" id="motel"
+                value="motel" checked>
+              <label class="fieldset-label" for="motel">Motel</label>
+            </li>
+            <li class="infrastructure-item">
+              <input type="checkbox" class="visually-hidden infrastructure-check" name="stay-type" id="apartment"
+                value="apartment" checked>
+              <label class="fieldset-label" for="apartment">Apartments</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="price-wrapper">
+          <fieldset class="filter-form__fieldset-price">
+            <legend class="filter-form__legend">Cost per day, $:</legend>
+            <div class="filter-form__price-label-wrapper">
+              <label class="filter-form__price-label">From&#32;<output>0</output></label>
+              <label class="filter-form__price-label">Up to&#32;<output>3000</output></label>
+            </div>
+            <div class="range-wrapper">
+              <div class="range-scale">
+                <div class="range-bar"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                    left: 0px"></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                    right: 45px"></div>
+            </div>
+          </fieldset>
+          <button class="filter-form__submit-button" type="submit">Show</button>
+        </div>
+
+      </form>
+    </section>
+    <section class="sorter-section container">
+      <h2 class="visually-hidden">Sorting the search result</h2>
+      <p class="found-amount">Found: 3</p>
+      <div class="sorter-part">
+        <p>Sorting:</p>
+        <ul class="sorter-list clear-list">
+          <li class="sorter-item"><a class="sorter-link active" href="#">By price</a></li>
+          <li class="sorter-item"><a class="sorter-link" href="#">By type</a></li>
+          <li class="sorter-item"><a class="sorter-link" href="#">By rating</a></li>
+        </ul>
+        <ul class="sort_arrow-list clear-list">
+          <li class="sort_arrow-item">
+            <a class="sort_arrow-link" href="#" aria-label="Cheap ones first">
+              <svg class="icon" width="11" height="10">
+                <use xlink:href="#icon-up"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sort_arrow-item">
+            <a class="sort_arrow-link active" href="#" aria-label="Expensive ones first">
+              <svg class="icon" width="11" height="10">
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="apartment-section">
+      <h2 class="visually-hidden">Search Results</h2>
+      <ul class="apartment-list clear-list">
+        <li class="apartment-item container">
+          <img src="img/amararesort.jpg" width="135" height="90" alt="Image of the hotel Amara Resort & Spa">
+          <div class="apartment-info">
+            <h3 class="apartment-title"><a href="#">Amara Resort & Spa</a></h3>
+            <span class="apartment-type">Hotel</span>
+            <span class="apartment-price">from 4000 $</span>
+            <a class="detail-btn result-btn" href="#">More</a>
+            <a class="booking-btn result-btn" href="#">Book</a>
+          </div>
+          <div class="hotel_rate-section">
+            <p class="star-section four-star"><span class="visually-hidden">4 stars</span></p>
+            <p class="user_rate">Rating: 8,5</p>
+          </div>
+        </li>
+        <li class="apartment-item container">
+          <img src="img/desertquail.jpg" width="135" height="90" alt="Изображение мотеля Desert Quail Inn">
+          <div class="apartment-info">
+            <h3 class="apartment-title"><a href="#">Desert Quail Inn</a></h3>
+            <span class="apartment-type">Motel</span>
+            <span class="apartment-price">from 3000 $.</span>
+            <a class="detail-btn result-btn" href="#">More</a>
+            <a class="booking-btn result-btn" href="#">Book</a>
+          </div>
+          <div class="hotel_rate-section">
+            <p class="star-section three-star"><span class="visually-hidden">3 stars</span></p>
+            <p class="user_rate">Rating: 8,9</p>
+          </div>
+        </li>
+        <li class="apartment-item container">
+          <img src="img/villasatpoco.jpg" width="135" height="90" alt="Image of the apartment Villas at Poco Diablo">
+          <div class="apartment-info">
+            <h3 class="apartment-title"><a href="#">Villas at Poco Diablo</a></h3>
+            <span class="apartment-type">Apartments</span>
+            <span class="apartment-price">from 2000 $</span>
+            <a class="detail-btn result-btn" href="#">More</a>
+            <a class="booking-btn result-btn" href="#">Book</a>
+          </div>
+          <div class="hotel_rate-section">
+            <p class="star-section two-star"><span class="visually-hidden">2 stars</span></p>
+            <p class="user_rate">Rating: 9,2</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <b class="page-footer__hashtag main-title main-title--bigger">#visitSEDONA</b>
+    </div>
+    <div class="page-footer__wrapper ">
+      <ul class="page-footer__social-list social-list list">
+        <li class="social-list__item">
+          <a class="social-list__social-link social-link social-link--vkontakte" href="#" aria-label="We're on Twitter">
+            <svg width="18" height="15">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__social-link social-link social-link--facebook" href="#" aria-label="We are on Facebook">
+            <svg width="9" height="19">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__social-link social-link social-link--instagram" href="#" aria-label="We're on YouTube">
+            <svg width="20" height="14">
+              <use xlink:href="#youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__wrapper copyright">
+      <b class="copyright__text main-text main-text--the-biggest main-text--black">Developed by Yulia Reutova</b>
+      <a class="copyright__link" href="#" aria-label="">
+
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

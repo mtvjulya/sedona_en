@@ -1,0 +1,79 @@
+.form-review {
+  padding-top: 16px;
+  width: 100%;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+}
+
+
+.form-review__button {
+  display: block;
+  height: 58px;
+  width: 100%;
+  max-width: 324px;
+  text-align: center;
+  margin: 40px auto;
+  // margin-top: 40px;
+}
+
+.form__invalid{
+  background-color: red;
+}
+@media (min-width: @tablet-width) {
+  .form-inner-part::before {
+    display: none;
+  }
+
+  .form-review__form {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-review__form::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 292px;
+    top: 0;
+    left: 0;
+    background-color: @gray-500;
+    margin-left: 50%;
+  }
+
+  .form-review__form-inner-part--review-score-section {
+    order: -1;
+  }
+
+  .review-score-section__label-review-score::before {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  .form-inner-part--contact {
+    grid-column: span 2;
+    border-top: 1px solid @gray;
+    padding: 0;
+  }
+
+  .form-inner-part--visited-place-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // justify-content: space-between;
+    grid-column: span 2;
+    border-top: 1px solid @gray;
+    padding: 0 100px;
+  }
+
+  .form-inner-part--visited-place-section .form-inner-part__visited-place-section {
+    justify-self: start;
+  }
+
+  .text-review-section {
+    grid-column: span 2;
+  }
+}

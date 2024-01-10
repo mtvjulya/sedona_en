@@ -1,0 +1,39 @@
+.form-inner-part {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  margin: 20px 0;
+  border: none;
+  width: 100%;
+  // border-top: 1px solid @gray-100;
+}
+
+.form-inner-part::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: @gray-100;
+  margin-top: -60px;
+}
+
+.form-inner-part label,
+.form-inner-part legend {
+  text-align: center;
+}
+
+.form-inner-part__review-score-section {
+  margin: 10px 0;
+}
+
+.form-inner-part__visited-place-section {
+  margin: 10px 0;
+}
+
+.form-inner-part__text-review-section::before {
+  margin-top: -20px;
+}

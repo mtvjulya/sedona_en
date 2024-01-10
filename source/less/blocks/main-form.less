@@ -1,0 +1,215 @@
+/* -----main-form----- */
+
+.form-wrapper {
+  position: relative;
+  background-color: @white;
+  z-index: 2;
+}
+
+.button-search {
+  width: 568px;
+  height: 86px;
+  background-color: @basic-brown;
+}
+
+.button-search:hover {
+  background-color: @basic-brown-100;
+  outline: none;
+}
+
+.button-search:active {
+  background-color: @basic-brown-200;
+}
+
+.main-form {
+  position: absolute;
+  left: 316px;
+  top: 280px;
+  width: 568px;
+  height: 395px;
+  padding: 55px;
+  background-color: @white;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  transform-origin: top center;
+  z-index: 1;
+}
+
+.open {
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.hidden {
+  animation-name: popup;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 458px;
+  margin-bottom: 29px;
+
+}
+
+.main-form .input-wrapper:nth-of-type(3) {
+  margin-bottom: 0;
+}
+
+.input-wrapper-two {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.input-wrapper .input-wrapper-two:first-child {
+  width: 227px;
+  margin-right: 53px;
+}
+
+.input-wrapper .input-wrapper-two:nth-child(2) {
+  width: 180px;
+
+}
+
+.form__input-check-in {
+  width: 346px;
+  padding: 6px 13px;
+  background-color: @basic-light-100;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.button-calend {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  width: 21px;
+  height: 23px;
+  border: none;
+  background: url("/img/calendar.svg") no-repeat 0 0;
+
+}
+
+.button-calend:hover,
+.button-calend:focus {
+  background: url("/img/calendar-hover.png") no-repeat 0 0;
+}
+
+.button-calend:active {
+  background: url("/img/calendar-active.png") no-repeat 0 0;
+}
+
+.form__input-category-people {
+  width: 114px;
+  padding: 6px 13px;
+  background-color: @basic-light-100;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.form__input-category-people:hover {
+  background-color: @basic-light-250;
+}
+
+.form__input-category-people:focus {
+  box-sizing: border-box !important;
+  width: 114px;
+  height: 38px;
+  border: 2px solid @basic-light-250;
+  background-color: @white;
+  outline: none;
+}
+
+.button-minus {
+  position: absolute;
+  right: 89px;
+  top: 50%;
+  width: 12px;
+  height: 3px;
+  margin-top: -2px;
+  border: none;
+  background-image: url("/img/Rectangle.svg");
+  background-position: 0 0;
+  background-size: 12px 3px;
+  background-repeat: no-repeat;
+}
+
+.button-minus:hover,
+.button-minus:focus {
+  background-image: url("/img/Rectangle-black.svg");
+  background-position: 0 0;
+  background-size: 12px 3px;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.button-minus:active {
+  background-image: url("/img/Rectangle-blue.svg");
+  background-position: 0 0;
+  background-size: 12px 3px;
+  background-repeat: no-repeat;
+
+}
+
+.button-plus {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  margin-top: -6px;
+  border: none;
+  background-image: url("/img/Union.svg");
+  background-position: 0 0;
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+}
+
+.button-plus:hover,
+.button-plus:focus {
+  background-image: url("/img/Union-black.svg");
+  background-position: 0 0;
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.button-plus:active {
+  background-image: url("/img/Union-blue.svg");
+  background-position: 0 0;
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+}
+
+.form-button-submit {
+  width: 100%;
+  height: 58px;
+  padding: 16px;
+  margin-top: 54px;
+  background-color: @blue;
+}
+
+.form-button-submit:hover,
+.form-button-submit:focus {
+  background-color: @blue-100;
+}
+
+.form-button-submit:active {
+  background-color: @blue-200;
+}

@@ -1,0 +1,43 @@
+.review-score-section {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+
+.review-score-section__label-review-score {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+  padding-left: 78px;
+}
+
+
+.review-score-section__label-review-score::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px @white-100;
+  border-radius: 50%;
+  background-color: @white-100;
+}
+
+.review-score-section__input-score:checked ~ .review-score-section__label-review-score::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+  margin-left: 20px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: @dark;
+}

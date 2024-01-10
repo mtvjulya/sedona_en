@@ -1,0 +1,87 @@
+.features-city-section {
+  background-color: @white;
+  padding: 35px 20px;
+}
+
+.city-feature {
+  position: relative;
+}
+
+.city-feature::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  // background-color: @blue;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.city-feature--accommodation::before {
+  background-image: url("/img/index/icon-house.svg");
+}
+
+.city-feature--suveniurs::before {
+  background-image: url("/img/index/icon-gift.svg");
+}
+
+.city-feature--food::before {
+  background-image: url("/img/index/icon-burger.svg");
+}
+
+@media (max-width: @mobile-width-only) {
+  .features-city-section__city-feature {
+    text-align: left;
+    margin-left: 52px;
+    margin-bottom: 26px;
+  }
+
+  .features-city-section__city-feature:last-child {
+    margin-bottom: 0;
+  }
+
+  .city-feature::before {
+    top: -5px;
+    left: -52px;
+  }
+
+  .features-item-city__description {
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features-city-section {
+    min-height: 328px;
+    padding: 0;
+  }
+
+  .features-city-section__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    padding: 0;
+  }
+
+  .features-city-section__city-feature {
+    margin-top: 158px;
+    padding: 0 26px;
+  }
+
+  .city-feature::before {
+    width: 75px;
+    height: 75px;
+    top: -101px;
+    left: 50%;
+    margin-left: -37px;
+    background-size: contain;
+  }
+
+  .city-feature--suveniurs {
+    order: 1;
+  }
+
+  .features-item-city__description {
+    margin-top: 21px;
+  }
+}
